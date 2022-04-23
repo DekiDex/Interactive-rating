@@ -1,0 +1,124 @@
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+	font-family: 'Overpass', sans-serif;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	background: hsl(216, 12%, 8%);
+}
+
+.thankyou {
+	text-align: center;
+}
+
+.selected {
+	color: hsl(25, 97%, 53%);
+	background-color: hsl(216, 12%, 54%, .1);
+	border-radius: 1rem;
+	margin: .5rem 3.7rem;
+	padding: .3rem 0;
+}
+
+.how {
+	background: hsl(213, 19%, 18%);
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+	color: white;
+	font-weight: 700;
+}
+
+p {
+	color: hsl(217, 12%, 63%);
+	font-weight: 400;
+}
+
+.submit {
+	border: none;
+	color: white;
+	background-color: hsl(25, 97%, 53%);
+	text-align: center;
+	width: 100%;
+	font-weight: 700;
+	font-size: 85%;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.submit:hover {
+	background-color: white;
+	color: hsl(25, 97%, 53%);
+}
+
+.star {
+	background-color: hsl(216, 12%, 54%, .1);
+	padding: .8rem;
+	border-radius: 35px;
+}
+
+.rating {
+	color: hsl(217, 12%, 63%);
+	border-radius: 16px;
+	border: none;
+	background-color: hsl(216, 12%, 54%, .2);
+	cursor: pointer;
+}
+
+.rating[aria-selected="true"]{
+	background-color:  hsl(217, 12%, 63%);
+	color: white;
+}
+
+.rating:hover {
+	color: white;
+	background-color: hsl(25, 97%, 53%);
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 280px) {
+    .how {
+    	width: 330px;
+    	padding: 1.4rem;
+    	border-radius: 1rem;
+    }
+
+    h1 {
+    	font-size: 160%;
+    }
+
+    p {
+    	font-size: 90%;
+    }
+
+    .rating {
+    	width: 45px;
+    	height: 45px;
+    	border-radius: 50%;
+    }
+
+    .submit {
+    	padding: 1rem 0;
+    	border-radius: 35px;
+    }
+
+    .buttons {
+    	margin: 1rem 0 1.4rem 0;
+    }
+
+
+}
