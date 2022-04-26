@@ -1,41 +1,18 @@
-const btns= document.querySelectorAll('[role="button"]');
-const submitBtn= document.getElementById('submit');
-const feedBackBox = document.getElementById('feedback-box');
-const thankYouBox = document.getElementById('thank-you-box');
-const selectedRating = document.getElementById('selected-rating');
+'use strict'
 
+const submitBtn = document.querySelector('.submit')
+const hideContainer = document.querySelector('.how')
+const showContainer = document.querySelector('.thankyou')
 
-btns.forEach((btn)=>{
+let rating = document.querySelectorAll('input')
+let showValue = document.querySelector('.show--rating')
 
-  btn.addEventListener('click' ,function (e) {
-
-    let selectedBtn= e.currentTarget;
-    for (let i = 0 ; i < btns.length;  i++){
- 
-     if (btns[i].getAttribute('aria-selected')=='true') {
-
-      btns[i].setAttribute('aria-selected',false);
-      selectedBtn.setAttribute('aria-selected',true);
-      selectedRating.textContent=selectedBtn.id;
-
-
-     }
-  else 
-       {
-  	    selectedBtn.setAttribute('aria-selected',true);
-      selectedRating.textContent=selectedBtn.id;
-       }
-
-    }
-
-  })
-
-
-})
-
-submitBtn.addEventListener('click' ,function(){
-
-  feedBackBox.setAttribute('hidden', true);
-  thankYouBox.removeAttribute('hidden');
-
+for (let i = 0; i < rating.length; i++) {
+    rating[i].addEventListener('click', function () {
+        showValue.innerHTML = rating[i].value
+    })
+}
+submitBtn.addEventListener('click', () => {
+    hideContainer.classList.add('display--none')
+    showContainer.classList.remove('display--none')
 })

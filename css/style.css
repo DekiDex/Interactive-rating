@@ -16,6 +16,11 @@ body {
 
 .thankyou {
 	text-align: center;
+	background: hsl(213, 19%, 18%);
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .selected {
@@ -61,28 +66,35 @@ p {
 	color: hsl(25, 97%, 53%);
 }
 
+.buttons input {
+    display: none;
+}
+
+.buttons input + label {
+    cursor: pointer;
+    background-color: #3c434c;
+    color: white;
+    border-radius: 50%;
+    padding: .8rem 1.2rem;
+    text-align: center;
+}
+
+.buttons input:checked + label {
+    background-color: hsl(217, 12%, 63%);
+}
+
+.buttons input + label:hover {
+    background-color: hsl(25, 97%, 53%);
+}
+
 .star {
 	background-color: hsl(216, 12%, 54%, .1);
 	padding: .8rem;
 	border-radius: 35px;
 }
 
-.rating {
-	color: hsl(217, 12%, 63%);
-	border-radius: 16px;
-	border: none;
-	background-color: hsl(216, 12%, 54%, .2);
-	cursor: pointer;
-}
-
-.rating[aria-selected="true"]{
-	background-color:  hsl(217, 12%, 63%);
-	color: white;
-}
-
-.rating:hover {
-	color: white;
-	background-color: hsl(25, 97%, 53%);
+.display--none {
+    display: none;
 }
 
 .buttons {
@@ -97,18 +109,18 @@ p {
     	border-radius: 1rem;
     }
 
+    .thankyou {
+    	width: 330px;
+    	padding: 1.4rem;
+    	border-radius: 1rem;
+    }
+
     h1 {
     	font-size: 160%;
     }
 
     p {
     	font-size: 90%;
-    }
-
-    .rating {
-    	width: 45px;
-    	height: 45px;
-    	border-radius: 50%;
     }
 
     .submit {
@@ -119,6 +131,4 @@ p {
     .buttons {
     	margin: 1rem 0 1.4rem 0;
     }
-
-
 }

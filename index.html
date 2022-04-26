@@ -30,14 +30,19 @@
     <p>Please let us know how we did with your support request. All feedback is appreciated 
   to help us improve our offering!</p>
 
-  <div class="buttons">
-    <button class="rating" aria-selected="false" id="1" aria-selected="false" role="button">1</button>
-    <button class="rating" aria-selected="false" id="2" aria-selected="false" role="button">2</button>
-    <button class="rating" aria-selected="false" id="3" aria-selected="false" role="button">3</button>
-    <button class="rating" aria-selected="false" id="4" aria-selected="false" role="button">4</button>
-    <button class="rating" aria-selected="false" id="5" aria-selected="false" role="button">5</button>
+  <form class="buttons">
+    <input class="rating" type="radio" id="rating1" name="ratings" value="1" />
+    <label for="rating1">1</label>
+    <input class="rating" type="radio" id="rating2" name="ratings" value="2" />
+    <label for="rating2">2</label>
+    <input class="rating" type="radio" id="rating3" name="ratings" value="3" />
+    <label for="rating3">3</label>
+    <input class="rating" type="radio" id="rating4" name="ratings" value="4" />
+    <label for="rating4">4</label>
+    <input class="rating" type="radio" id="rating5" name="ratings" value="5" />
+    <label for="rating5">5</label>
 
-  </div>
+  </form>
   
     <button class="submit" id="submit">SUBMIT</button>
 
@@ -45,10 +50,10 @@
 
 
 
-<div hidden class="how thankyou" id="thank-you-box">
+<div class="thankyou display--none" id="thank-you-box">
 
     <img alt="Frontend Mentor | Interactive rating componen" src="images/illustration-thank-you.svg">
-    <p class="selected">You selected <span id="selected-rating">0</span> out of 5</p>
+    <p class="selected">You selected <span class="show--rating">0</span> out of 5</p>
 
     <h1>Thank you!</h1>
 
